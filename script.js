@@ -18,11 +18,10 @@ getFromSessionStorage();
 // functions
 function switchTab(newTab) {
     if (newTab !== oldTab) {
+        errorScreen.classList.remove("active");
         oldTab.classList.remove("current-tab");
         oldTab = newTab;
         oldTab.classList.add("current-tab");
-
-        errorScreen.classList.remove("active");
 
         if (!searchForm.classList.contains("active")) {
             // if search form container is invisible then making it visible
